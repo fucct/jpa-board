@@ -1,6 +1,7 @@
 package com.fucct.jpaboard.member.domain;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.BDDAssertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -22,5 +23,6 @@ class MemberRepositoryTest {
         assertThat(memberRepository.save(member))
             .extracting(Member::getId)
             .isEqualTo(1L);
+
     }
 }
